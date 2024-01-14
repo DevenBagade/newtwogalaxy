@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>GALAXY MENS WEAR</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #864AF9;
+        }
+
+        .centered-text {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #332941;
+            color: #F8E559;
+            margin-bottom: 5px;
+        }
+
+        #ani,
+        #ani2,        
+        #dis {
+            margin: 0;
+            font-size: 2em;
+            text-transform: uppercase;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        #ani2 {
+            animation: slideUp2 1s ease-in-out;
+        }
+
+        #ani3 {
+            margin: 0;
+            font-size: 1em;
+            text-transform: uppercase;
+           
+            animation: fade 1s ease-in-out;
+        }
+
+        #dis {
+            font-size: 1em;
+        }
+
+        h2 {
+            background-color: #864AF9;
+            color: #F8E559;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 0.5em;
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(10px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp2 {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        marquee {
+            white-space: nowrap;
+        }
+
+        #container {
+            position: relative;
+            text-align: center;
+            max-width: 50%;
+            margin: auto;
+        }
+
+     #infoContainer{
+     font-size: 1em;
+     color: #332941;
+     animation: fade 0.2s ease-in-out;
+}
+
+
+        #menu {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            box-sizing: border-box;
+            color: #864AF9;
+        }
+
+        #menu a {
+            color: yellow;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        #image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="centered-text">
+        <h1 id="ani">GALAXY &nbsp;</h1> <h1 id="ani2"> MENS &nbsp;</h1><h1 id="ani2"> Wear &nbsp; </h1>
+    </div>
+
+    <center>
+        <h2 id="ani3">
+            Style Stitched Just for You: Explore Our Tailor Shop Excellence
+        </h2>
+    </center>
+
+
+<center>
+<div id="infoContainer"><b>Name : NANDKUMAR BAGADE ; phone_no: 9821443072<b></div>
+</center>
+
+
+
+    <div id="image-info"></div>
+
+    <center>
+        <div id="container">
+            <div id="menu">
+                <!-- Your menu items go here -->
+                <a href="C:\Users\ADMIN\galaxygithub\index.html">Home</a>
+                <a href="C:\Users\ADMIN\galaxygithub\galaxyitems.html">Galaxy_Items</a>
+                <a href="#"  id="toggleButton" onclick="toggleInfo()">Contact</a>
+                <a href="https://maps.app.goo.gl/vRURJgLN77ZWzyxB9">Location</a>
+            </div>
+            <img id="image" src="C:\Users\ADMIN\Downloads\galaxy.jpg" align="center">
+        </div>
+    </center>
+
+    <div id="info">
+        <p></p>
+    </div>
+
+
+<script>
+  let infoContainer = document.getElementById('infoContainer');
+  let toggleButton = document.getElementById('toggleButton');
+
+ 
+  infoContainer.style.display = 'none';
+
+  function toggleInfo() {
+    if (infoContainer.style.display === 'none') {
+      infoContainer.style.display = 'block';
+     
+    } else {
+      infoContainer.style.display = 'none';
+
+    }
+  }
+</script>
+
+
+
+
+</body>
+
+</html>git 
