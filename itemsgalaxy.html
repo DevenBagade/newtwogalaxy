@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALAXY MENS WEAR</title>
+    <style>
+        #menunext {
+            
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #332941;
+            padding: 15px;
+            box-sizing: border-box;
+            
+            text-align: center;
+        }
+
+        #menunext a {
+            color: yellow;
+             text-decoration: none;
+            font-size: 1.2em;
+            margin: 0 20px;
+            
+        }
+
+        #dis {
+            display: flex;
+            justify-content: center;
+            align-items: center;           
+            
+            animation: fadeIn 1s ease-in-out;
+            color: #332941;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            font-size: 1.5em;
+            text-transform: uppercase;
+        }
+
+        .item-container {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .circle-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            background-color: #332941;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        .circle-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .alt-text {
+            
+            color: yellow;
+        }
+#info{
+font-size: 20px;
+}
+
+
+#infoContainertwo{
+ font-size: 1.2em;
+     color: #332941;
+
+     animation: fade 0.2s ease-in-out;
+}
+@keyframes fade{
+from{
+opacity:0;}
+to{
+opacity:1;
+}
+}
+
+
+
+    </style>
+</head>
+<body style="background-color: #864AF9;">
+
+    <div id="menunext">
+        <center>
+            <!-- Your menu items go here -->
+            <a href="C:\Users\ADMIN\galaxygithub\index.html">Home</a>
+           
+<a href="C:\Users\ADMIN\galaxygithub\galaxyitems.html">Galaxy_Items</a>
+            <a href="#" id="toggleButton"  onclick="toggleInfo()">Contact</a> 
+<a href="https://maps.app.goo.gl/vRURJgLN77ZWzyxB9">Location</a>
+        </center>
+    </div>
+
+<center>
+<div id="infoContainertwo"><b>Name : NANDKUMAR BAGADE ; phone_no: 9821443072</b></div>
+<center>
+
+
+
+    <div id="dis">
+        <h2>Discover Your Style</h2>
+    </div>
+
+    <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+
+        <div class="item-container">
+            <div class="circle-container">
+                <img src="https://5.imimg.com/data5/YQ/ZO/MQ/SELLER-14071010/unicolr-formal-sky-blue-shirts.jpeg" alt="Shirt">
+            </div>
+            <div class="alt-text"><h3>Shirt</h3></div>
+        </div>
+
+        <div class="item-container">
+            <div class="circle-container">
+                <img src="https://assets.ajio.com/medias/sys_master/root/20230306/abtP/640612bff997dde6f4e1b3cb/-473Wx593H-441147381-blue-MODEL.jpg" alt="Pant">
+            </div>
+            <div class="alt-text"><h3>Pant</h3></div>
+        </div>
+
+        <div class="item-container">
+            <div class="circle-container">
+                <img src="https://static3.azafashions.com/tr:w-450/uploads/product_gallery/1660045-0321660001661348609.jpg" alt="Kurta">
+            </div>
+            <div class="alt-text"><h3>Kurta</h3></div>
+        </div>
+
+        <div class="item-container">
+            <div class="circle-container">
+                <img src="https://i.etsystatic.com/30337043/r/il/e45f17/3239973363/il_570xN.3239973363_4anl.jpg" alt="Suit">
+            </div>
+            <div class="alt-text"><h3>Suit</h3></div>
+        </div>
+
+      <div class="item-container">
+            <div class="circle-container">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/3/QN/TI/VM/4192797/school-uniforms-500x500.jpg" alt="Uniform">
+            </div>
+            <div class="alt-text"><h3>Uniform</h3></div>
+        </div>
+
+    </div>
+
+
+
+<div id="info">
+    <p></p>
+</div>
+
+
+
+
+<script>
+    
+    function displayInfo(imageType) {
+        var infoDiv = document.getElementById("info");
+        var infoText = "";
+
+        // Determine information based on the clicked image type
+        switch (imageType) {
+            case 'Shirt':
+                infoText = "This is a stylish shirt for men.";
+                break;
+            case 'Pant':
+                infoText = "These are comfortable and fashionable pants.";
+                break;
+            case 'Kurta':
+                infoText = "Explore traditional and trendy kurtas.";
+                break;
+            case 'Suit':
+                infoText = "Elegant suits for a sophisticated look.";
+                break;
+           case 'Uniform':
+                infoText = "Elegant unifom for a sophisticated look.";
+                break;
+            default:
+                infoText = "No information available.";
+        }
+
+        // Display the information in the #info div
+        infoDiv.innerHTML = "<p>" + infoText + "</p>";
+        infoDiv.style.display = "block";
+    }
+
+
+    var itemContainers = document.querySelectorAll('.item-container');
+    itemContainers.forEach(function(container) {
+        container.addEventListener('click', function() {
+            var imageType = container.querySelector('.alt-text h3').textContent;
+            displayInfo(imageType);
+        });
+    });
+
+
+
+  let infoContainertwo = document.getElementById('infoContainertwo');
+  let toggleButton = document.getElementById('toggleButton');
+
+ 
+  infoContainertwo.style.display = 'none';
+
+  function toggleInfo() {
+    if (infoContainertwo.style.display === 'none') {
+      infoContainertwo.style.display = 'block';
+     
+    } else {
+      infoContainertwo.style.display = 'none';
+
+    }
+  }
+</script>
+
+
+
+
+</script>
+
+</body>
+
+
+
+</html>
